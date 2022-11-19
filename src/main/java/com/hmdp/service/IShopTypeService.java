@@ -1,5 +1,6 @@
 package com.hmdp.service;
 
+import com.hmdp.dto.Result;
 import com.hmdp.entity.ShopType;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IShopTypeService extends IService<ShopType> {
 
+    /**
+     * 查询商铺类型，并运用redis进行缓存
+     * @return
+     */
+    Result getTypeList();
 }
