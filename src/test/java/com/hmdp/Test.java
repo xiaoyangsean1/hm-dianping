@@ -15,11 +15,7 @@ public class Test {
 
     @org.junit.Test
     public void test(){
-        for (int i = 0; i < 10; i++) {
-
-            long l = RandomUtil.randomLong(1, 5);
-            System.out.println(l);
-        }
+        System.out.println(7 & 1);
     }
 
 }

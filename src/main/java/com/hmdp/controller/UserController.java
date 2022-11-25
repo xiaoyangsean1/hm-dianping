@@ -60,8 +60,9 @@ public class UserController {
      */
     @PostMapping("/logout")
     public Result logout(){
-        // TODO 实现登出功能
-        return Result.fail("功能未完成");
+        //  实现登出功能
+        UserHolder.removeUser();
+        return Result.ok();
     }
 
     @GetMapping("/me")
@@ -96,4 +97,15 @@ public class UserController {
         // 返回
         return Result.ok(userDTO);
     }
+
+    @PostMapping("/sign")
+    public Result sign(){
+        return userService.sign();
+    }
+
+    @GetMapping("/sign/count")
+    public Result signCount(){
+        return userService.signCount();
+    }
+
 }
